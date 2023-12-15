@@ -1,0 +1,656 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/treesBlog.css" media="screen">
+    <title>WellnessPro</title>
+</head>
+
+<body>
+<header>
+  <h1 class="colored-text">
+    <span class="purple">Wellness</span><span class="white">Pro</span>
+  </h1>
+  
+<div id="menuTitle" class="menu">
+    <nav id="menuIts" class="menu mnHide">
+            <a href="#welcome">Main page</a>
+            <a href="#articles">Articles</a>
+            <a href="#opinions">Visitor opinions</a>
+            <a href="#addOpinion">Add your opinion</a>
+            <a href="#addArticle">Add your article</a>
+            <a href="#course">Courses</a>
+            <a href="#diet">Healthy diet</a>
+            <a href="#advice">Medical advice</a>
+    </nav>
+</div>
+
+</header>
+
+<main id="router-view">
+    
+</main>
+
+<footer>
+  <div class="info">
+    
+    <h3>To collaborate, please contact the website owner:</h3>
+    <a class="size" href="mailto:maksym.kuznietsov@student.tuke.sk">My email</a><br>
+    <a class="size" href="tel:0950384281">My contact number</a>
+</div><br>
+    Kuznietsov Maksym <br>
+    (c) 2023
+</footer>
+
+
+<!--Templates for html, dynamically inserted by the router -->
+
+<script id="template-welcome" type="text/template">
+    <div class="lop">
+      <h2 class="wel">Welcome!</h2>
+
+        <p class="p">
+            Welcome to WellnessPro. At WellnessPro, we're dedicated to helping you achieve your optimal
+            health and wellness. Our platform offers a range of tailored resources
+            to enhance both your physical fitness and mental well-being
+        </p>
+        
+    </div><br><br><br><br><br><br><br>
+    
+</script>
+
+<script id="template-advice" type="text/template">
+  <h1>Medical advice</h1>
+
+    <p>
+      This section is your gateway to a holistic approach to fitness. We provide
+      concise yet crucial insights to elevate your exercise regimen. From
+      effective warm-ups to balanced nutrition, we cover essentials that amplify
+      your well-being. Monitor your progress and optimize your workouts for a
+      healthier, more effective fitness journey. Let's get started!
+    </p>
+
+    <h3>1. Effective Warm-Up before Exercise:</h3>
+    <p>
+      Proper warm-up is an integral part of preparing for physical activity. It
+      helps to prepare the muscles, ligaments, and joints for intensive
+      exercise. Warm-up involves gradually increasing the intensity of
+      movements, which promotes better blood circulation and prepares the
+      muscles for training. For example, before a cardio workout, it's
+      recommended to start with light aerobic exercises such as jogging or
+      walking, gradually increasing the pace. In the case of strength training,
+      include exercises with body weight or light dumbbells for warm-up.
+    </p>
+    <br>
+    <h3>2. The Significance of Balanced Nutrition:</h3>
+    <p>
+      Balanced nutrition is a key aspect of maintaining health and an effective
+      training program. Your diet should include all necessary macro- and
+      micronutrients to provide the body with energy and building materials for
+      muscles. It's important to consider the ratio of proteins, carbohydrates,
+      and fats in your diet. Proteins assist in growth and tissue repair,
+      carbohydrates provide energy, and healthy fats are essential for the
+      normal functioning of organs and systems.
+    </p>
+    <br>
+
+    <h3>3. Regular Monitoring of Heart Rate and Breathing During Exercise:</h3>
+    <p>
+      Monitoring your heart rate and breathing is important for assessing the
+      intensity of your workout and ensuring safety during exercise sessions.
+      The pulse is a reflection of your cardiovascular system's performance, and
+      normal breathing provides the body with oxygen. It's recommended to
+      familiarize yourself with your pulse rate norms for different levels of
+      workout intensity and regularly monitor your breathing during exercises.
+    </p>
+    <br>
+
+    <h3>4. The Importance of Proper Pre and Post-Exercise Nutrition:</h3>
+    <p>
+      Nutrition before and after exercise plays a crucial role in the
+      effectiveness of the training process. Before a workout, it's advisable to
+      consume easily digestible carbohydrates, which will provide the body with
+      energy. After exercise, it's important to replenish glycogen stores and
+      provide the body with proteins for muscle recovery. Including protein-rich
+      foods and carbohydrate complexes in your diet is recommended.
+    </p>
+    <br>
+
+    <h3>5. Regular Physical Fitness Assessments and Progress Tracking:</h3>
+    <p>
+      Keeping a workout journal and regularly measuring physical fitness
+      parameters help track progress and adjust the training process. Record
+      workout results, measure body dimensions, and analyze your achievements.
+      This will help you understand which methods are most effective for you and
+      motivate you to achieve new milestones.
+    </p>
+    <br>
+</script>
+
+<script id="template-diet" type="text/template">
+  <h1>Healthy diet</h1>
+
+    <p>
+      This section is an invaluable resource for anyone striving for a
+      harmonious balance between physical activity and proper nutrition. Here,
+      we offer you tailored dietary recommendations to meet various goals:
+      muscle gain, weight loss, and maintaining optimal shape
+    </p><br>
+
+    <div class="container">
+      <h3>For Muscle Gain:</h3>
+      <div class="wrap">
+        
+        <div class="col">
+          <p>Proteins:</p>
+          <ul>
+            <li>Chicken breast</li>
+            <li>Lean beef</li>
+            <li>Fish (salmon, tuna)</li>
+            <li>Eggs</li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <p>Carbohydrates:</p>
+          <ul>
+            <li>Oats</li>
+            <li>Sweet potatoes</li>
+            <li>Brown rice</li>
+            <li>Whole grain bread</li>
+            <li>Broccoli</li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <p>Healthy Fats:</p>
+          <ul>
+            <li>Nuts (walnuts, almonds)</li>
+            <li>Avocado</li>
+            <li>Flaxseed</li>
+            <li>Olive oil</li>
+          </ul>
+        </div>
+      </div><br>
+
+      <h3>For Weight Loss:</h3>
+      <div class="wrap">
+        <div class="col">
+        <p>Proteins:</p>
+        <ul>
+          <li>Fish</li>
+          <li>Eggs</li>
+          <li>Greek yogurt</li>
+          <li>Spinach</li>
+        </ul>
+      </div>
+        <div class="col">
+          <p>Carbohydrates:</p>
+          <ul>
+            <li>Quinoa</li>
+            <li>Brown rice</li>
+            <li>Sweet potatoes</li>
+            <li>Oats</li>
+            <li>Legumes</li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <p>Healthy Fats:</p>
+          <ul>
+            <li>Avocado</li>
+            <li>Seeds</li>
+            <li>Olive oil</li>
+            <li>Fatty fish</li>
+          </ul>
+        </div>
+      </div><br>
+      
+      <h3>For Maintaining Optimal Shape:</h3>
+      <div class="wrap">
+        <div class="col">
+        <p>Proteins:</p>
+        <ul>
+          <li>Grilled chicken breast:</li>
+          <li>Cottage cheese: </li>
+          <li>Turkey breast</li>
+          <li>Lean beef</li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <p>Carbohydrates:</p>
+        <ul>
+          <li>Quinoa</li>
+          <li>Brown rice</li>
+          <li>Legumes (beans, lentils)</li>
+          <li>Fruits (berries, apples, oranges)</li>
+          <li>Sweet potatoes</li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <p>Healthy Fats:</p>
+        <ul>
+          <li>Coconut oil </li>
+          <li>Nut butters</li>
+          <li>Avocado</li>
+          <li>Olive oil: Extra virgin </li>
+        </ul>
+      </div>
+    </div>
+    </div><br>
+
+    <p>
+      Remember, the key aspect of any healthy diet is moderation and variety. It
+      is recommended to consult with a doctor or dietitian before making
+      significant changes to your diet. Your health is our priority!
+    </p>
+</script>
+
+<script id="template-course" type="text/template">
+    <main>
+    <h1>Courses</h1>
+    <div class="lop">
+      <article>
+      <h4 class="wel">Welcome to the courses section of our sports website!</h4>
+      <p>
+        Here, you'll find educational programs designed for athletes of all
+        skill levels - from beginners to experienced competitors. Our
+        mission is to make knowledge and skills in the field of sports
+        accessible to everyone. We believe that quality education should not
+        be unattainable due to high prices. We aim to create a space where
+        everyone can find a suitable course that meets their needs and level
+        of preparation. Regardless of your goal - whether it's to learn a
+        new sport, improve technique, enhance physical fitness, or elevate
+        your expertise - we have a fitting course for you. Our experienced
+        instructors and coaches have developed programs that will help you
+        achieve your sports-related aspirations. Join us and embark on your
+        journey towards reaching new heights in sports! Together, we will
+        turn your dream of excelling into reality, providing you with the
+        necessary knowledge, skills, and support.
+      </p>
+      <p>Don't miss the opportunity to become better - start now!</p>
+    </article>
+    </div>
+  
+
+  <h3 class="lop">Online courses on various sports:</h3>
+
+  <ol class="lop">
+    <li>Initial lessons for beginners</li>
+    <li>Advanced courses for experienced athletes</li>
+    <li>Individual and group lessons</li>
+  </ol>
+
+  <h3 class="lop">Technique and theory</h3>
+
+  <ul class="lop">
+    <li>
+      In-depth lessons on the fundamentals of technology in various
+      disciplines
+    </li>
+    <li>Theoretical courses on strategies and tactics in sports</li>
+  </ul>
+
+  <h2 class="lop">Our trainers</h2>
+
+  <div class="img-container">
+    <div class="img-box">
+      <img
+       
+        srcset="
+          fig/cbum-320.jpg 320w,
+          fig/cbum-480.jpg 480w,
+          fig/cbum-800.jpg 800w
+        "
+        sizes="(max-width: 320px) 280px,
+                (max-width: 480px) 440px,
+                800px"
+        src="fig/cbum-800.jpg"
+        alt="Cbum"
+      >
+    </div>
+    <div class="img-box">
+      <img
+        
+        srcset="
+          fig/arnold-320.jpg 320w,
+          fig/arnold-480.jpg 480w,
+          fig/arnold-800.jpg 800w
+        "
+        sizes="(max-width: 320px) 280px,
+                (max-width: 480px) 440px,
+                800px"
+        src="fig/arnold-800.jpg"
+        alt="Arnold"
+      >
+    </div>
+  </div>
+  
+</main>
+
+<footer>
+  <table>
+    <caption>
+      <h1>Results of our students at competitions</h1>
+    </caption>
+    <thead>
+      <tr>
+        <th>Place</th>
+        <th>Name</th>
+        <th>Kind of sport</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2">1</td>
+        <td>James Smith</td>
+        <td>Running</td>
+        <td>196</td>
+      </tr>
+      <tr>
+        <td>Benjamin Johnson</td>
+        <td>Squat</td>
+        <td>192</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Matthew Davis</td>
+        <td>Jumping</td>
+        <td>187</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>William Brown</td>
+        <td>Deadlift</td>
+        <td>183</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3">Result:</td>
+        <td>758</td>
+      </tr>
+    </tfoot>
+  </table>
+</footer>
+<br>
+
+</script>
+
+
+<script id="template-articles" type="text/template">
+    {{#articles}}
+    <article>
+        <h2><a href="{{detailLink}}">{{title}}</a></h2>  
+        <p>
+        by {{author}}
+        </p>
+    </article>
+    {{/articles}}
+    
+    <div id="paginationButtons">
+        <button id="prevPage">Previous</button>
+        <button id="nextPage">Next</button>
+    </div>
+    <footer  class="menuLink"><a href="#menuTitle">Back to the menu</a></footer>
+</script>
+
+<script id="template-articles-error" type="text/template">
+
+    <article>
+        <h2>Articles acquisition failed</h2>
+        <p>
+            {{errMessage}}
+        </p>
+    </article>
+    <footer  class="menuLink"><a href="#menuTitle">Back to the menu</a></footer>
+
+</script>  
+
+<script id="template-opinions" type="text/template">
+    <article  id="artOpinions">
+        <h2>Visitor Opinions</h2>
+        {{#.}}
+        <section>
+            <h3>User: {{name}}</h3>
+            <p>Opinion: {{comment}}</p>
+            <p>Email: {{email}}</p>
+            <p>Created in: <i>{{created}}</i></p><br>
+        </section>
+        {{/.}}
+        {{^.}}
+        <section>
+            Sorry, no opinions found.
+        </section>
+        {{/.}}
+        
+    </article>
+    <footer  class="menuLink"><a href="#menuTitle">Back to the menu</a></footer> 
+</script>
+
+<script id="template-addOpinion" type="text/template">
+    <div id="artOpnFrm">
+        <form id="opnFrm">
+            <h3>Express your experience in sports</h3>
+
+            <label for="visitorName">Your Name:<span class="required-star">*</span></label>
+            <input type="text" id="visitorName" name="visitorName" required><br><br>
+
+            <label for="visitorEmail">Your Email:<span class="required-star">*</span></label>
+            <input type="email" id="visitorEmail" name="visitorEmail" required><br><br>
+
+            <label for="imageURL">Image URL:</label>
+            <input type="url" id="imageURL" name="imageURL"><br><br>
+
+            <fieldset>
+                <legend>Choose your favorite types of sports:</legend>
+                <input type="checkbox" id="football" name="opinion" value="Football">
+                <label for="football">Football</label><br>
+                <input type="checkbox" id="basketball" name="opinion" value="Basketball">
+                <label for="basketball">Basketball</label><br>
+                <input type="checkbox" id="tennis" name="opinion" value="Tennis">
+                <label for="tennis">Tennis</label><br>
+                <input type="checkbox" id="gymnastics" name="opinion" value="Gymnastics">
+                <label for="gymnastics">Gymnastics</label><br>
+                <input type="checkbox" id="swimming" name="opinion" value="Swimming">
+                <label for="swimming">Swimming</label><br>
+            </fieldset><br>
+            
+            <fieldset>
+                <legend>Choose your gender:</legend>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label><br>
+                
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label><br>
+            </fieldset><br>
+
+            <label for="visitorMessage">What is your main goal in sports?<span class="required-star">*</span></label><br>
+            <textarea id="visitorMessage" name="visitorMessage" style="resize: none;" rows="5" required></textarea><br><br>
+
+            <label for="keywords">Keywords for the site:</label><br>
+            <input type="text" id="keywords" name="keywords" list="keywordsList"><br>
+            <datalist id="keywordsList">
+                <option value="Fitness">
+                <option value="Sport">
+                <option value="Nutrition">
+                <option value="Wellness">
+                <option value="Exercise">
+            </datalist><br><br>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form><br>
+    </article>
+</script>
+ 
+
+
+<script id="template-article-form" type="text/template">
+    <div>
+        <!-- <h2>{{formTitle}}</h2> <br><br> -->
+        
+        <form id="articleForm">
+            <h2 class="wel">Edit Article</h2>
+            <label for="author">Author:</label>
+            <input type="text" name="author" id="author" value="{{author}}" size="50" 
+                   title="Article author, max. length 100 characters." 
+                   maxlength="100" placeholder="e.g. Ján Trieska" />
+            <br>
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" value="{{title}}" size="50"  
+                   maxlength="100" pattern="\S[\S\s]*" placeholder="e.g. My story." required 
+                   title="Article title, mandatory item, max. length: 100 characters. 
+The first character must not be a space."  />
+            <br>
+            <label for="imageLink">Image (url):</label>
+            <input type="url" name="imageLink" id="imageLink" value="{{imageLink}}" size="50" 
+                   title="Image URL, max. length 100 characters." maxlength="100"/>
+            <br>
+            <label></label>
+            <button type="button" id="btShowFileUpload">
+                Upload image
+            </button>
+
+            <fieldset class="added hiddenElm" id="fsetFileUpload">
+                <legend>Image Upload</legend>
+                <input type="file" id="flElm" name="file" accept="image/jpeg, image/png"/>
+                <br />
+                <button type="button" id="btFileUpload">
+                    Send image to server </button>
+                <button type="button" id="btCancelFileUpload">
+                    Cancel uploading </button>
+            </fieldset>
+
+
+            <br>
+            <label for="content">Article content:</label>
+            <textarea
+                    name="content" id="content" spellcheck="true" lang="sk"
+                    cols="50" rows="20" required
+                    title="Article content, mandatory item, can be plain text or in HTML.">
+              {{content}}
+            </textarea>
+            <br>
+            <label for="tags">Keywords:</label>
+            <input  type="text" name="tags" id="tags" value="{{tags}}" size="50"
+                    title="Keyword list, comma separated." placeholder="e.g. village, drama" />
+            <br> <br>
+            <button type="reset"> Reset Form </button>
+            <button type="submit"> {{submitBtTitle}} </button>
+
+        </form>
+    </div>
+
+    <footer>
+        <a href="{{backLink}}" class="linkAsButton"><< Back</a>
+        <a href="#menuTitle" class="linkAsButton">Up to the menu</a>
+    </footer>
+</script>
+
+<script id="template-article" type="text/template">
+    <article>
+        <h3>{{title}}</h3>
+        <p>
+            by {{author}}
+        </p>
+        {{#imageLink}}
+        <figure>
+            <img src="{{imageLink}}" alt="article figure" />
+        </figure>
+        {{/imageLink}}
+        <div>{{{content}}}</div>
+        <p>
+            Keywords:
+            {{tags}}
+        </p>
+    </article>
+
+    <footer>
+        <a href="{{backLink}}" class="linkAsButton"><< Back</a>
+        <a href="{{editLink}}" class="linkAsButton">Edit</a>
+        <a href="{{deleteLink}}" class="linkAsButton">Delete</a>
+        <a href="#menuTitle" class="linkAsButton">Up to the menu</a>
+    </footer><br>
+        <!-- Comments Section -->
+        <article>
+            <section id="commentsSection">
+                <h2>Comments</h2>
+                {{#comments}}
+                    <div><h3>Created by: {{commenter}}</h3><p>{{comment}}</p></div>
+                {{/comments}}
+                
+    
+                <!-- Add Comment Form -->
+                <button id="addCommentBtn" style="display: block; ">Add Comment</button>
+                <div id="commentForm" style="display: none;">
+                    <form id="commentForm">
+                        <label for="commenter">Your Name:</label>
+                        <input type="text" id="commenter" name="commenter" required>
+                        <br><br>
+                        <label for="comment">Your Comment:</label>
+                        <textarea id="comment" name="comment" rows="3" required></textarea>
+                        <br><br>
+                        <button type="button" id="submitComment">Submit Comment</button>
+                    </form>
+                </div>
+            </section>
+        </article>
+        
+</script>  
+
+
+
+<script id="template-addArticle" type="text/template">
+    <div>
+        
+
+        <form id="articleForm">
+            <h2>Add your article</h2>
+            <label for="author">Author:</label>
+            <input type="text" name="author" id="author" size="50" 
+                   title="Article author, max. length 100 characters." 
+                   maxlength="100" placeholder="e.g. Ján Trieska" />
+            <br>
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" size="50"  
+                   maxlength="100" pattern="\S[\S\s]*" placeholder="e.g. My story." required 
+                   title="Article title, mandatory item, max. length: 100 characters. 
+The first character must not be a space."  />
+            <br>
+            <label for="imageLink">Image (url):</label>
+            <input type="url" name="imageLink" id="imageLink" size="50" 
+                   title="Image URL, max. length 100 characters." maxlength="100"/>
+            <br>
+        
+            <br>
+            <label for="content">Article content:</label>
+            <textarea
+                    name="content" id="content" spellcheck="true" lang="sk"
+                    cols="50" rows="20" required
+                    title="Article content, mandatory item, can be plain text or in HTML.">
+          
+            </textarea>
+            <br>
+            <label for="tags">Keywords:</label>
+            <input  type="text" name="tags" id="tags"  size="50"
+                    title="Keyword list, comma separated." placeholder="e.g. village, drama" />
+            <br> <br>
+            <button type="reset"> Reset Form </button>
+            <button type="submit"> Submit Form </button>
+
+        </form>
+    </div>
+
+</script>
+<!--JavaScript code, inserted as a module-->
+<script src="js/addOpinion.js" nomodule></script>
+<script src="js/articleFormsHandler.js" nomodule></script>
+<script type="module" src="js/index.js"></script>
+
+
+</body>
+</html>

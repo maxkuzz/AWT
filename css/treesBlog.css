@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+body {
+  font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: white;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../fig/cintaku_5.jpg");
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-around; /* Или space-between для распределения без отступов по краям */
+    align-items: center; /* Выравнивание элементов по центру по вертикали */
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  form {
+    background-color: rgba(255, 255, 255, 0.3); 
+    padding-left: 30px;
+    padding-right: 45px;
+    padding-top: 15px;
+    padding-bottom: 35px;
+    border-radius: 25px;
+    margin: 30px auto;
+    max-width: 600px; 
+  }
+  main > article{
+    background-color: rgb(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    padding: 0.3rem;
+    margin-bottom: 1rem;
+    }
+
+main > article > *{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+  
+  form > h3 {
+    font-size: 24px;
+  }
+  
+  .required-star {
+    color: rgb(176, 22, 176);
+    margin-left: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  
+  button[type="submit"],
+  button[type="reset"] {
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .info {
+    text-align: center;
+    font-size: 14px
+  }
+
+  .info > a{
+    font-size: 18px
+  }
+  
+  
+  .info a:hover {
+    text-decoration: underline;
+    transform: translateY(-3px);
+
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+  }
+  
+  header {
+    padding: 20px 0;
+  }
+  
+  .for-ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .medzera {
+    margin: 0 50px;
+  }
+  
+  .size {
+    font-size: 25px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  table {
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  
+  table,
+  th,
+  td {
+    border: 1px solid #ccc;
+  }
+  
+  th,
+  td {
+    padding: 8px 12px;
+    text-align: center;
+  }
+  
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .img-container img {
+    transition: transform 0.3s; 
+  }
+  
+  .img-container img:hover {
+    transform: scale(1.1); 
+  }
+  
+  .img-box {
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+  }
+  
+  .img-box img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .container {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .wrap {
+    margin: 20px 0; /* Уменьшили вертикальный отступ */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
+  }
+  
+  .col {
+    margin: 0 10px 20px 10px; /* Уменьшаем отступы */
+    flex: 1 1 300px; /* Задаем ширину колонок */
+   
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .col:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+
+
+  
+  a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    transition: transform 0.2s, box-shadow 0.2s; /* animation time */
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    transform: translateY(-5px);  /*prechod*/
+  }
+  
+  @keyframes changeColor {
+    0% {
+      color: black;
+    }
+    100% {
+      color: rgb(182, 67, 136);
+    }
+  }
+  
+  a:hover {
+    animation: changeColor 0.5s forwards;
+  }
+  
+  
+  
+  .linkAsButton, button{
+    background-color: rgb(205, 127, 220);
+    border-radius: 1em;
+    border-width: 0.1em;
+    border-color: rgb(255,255,255);
+    padding: 0.5em;
+    margin-bottom: 1em;
+    color: rgb(255, 255, 255);
+}
+
+figure img{
+    max-width: 100%;
+}
+
+
+#paginationButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#paginationButtons button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#paginationButtons button:hover {
+    background-color: rgb(229, 133, 154);
+    color: #0B0C10;
+}
+.wel{
+    text-align: center;
+}
+
+.colored-text {
+  font-size: 50px; 
+}
+
+.colored-text .purple,
+.colored-text .white {
+  font-size: inherit; /* Наследует размер шрифта от родительского элемента (h1) */
+}
+
+.colored-text .purple {
+  color: rgb(176, 22, 176); /* Фиолетовый цвет для первой части */
+}
+
+.colored-text .white {
+  color: white; /* Белый цвет для второй части */
+}
+
+.p{
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 480px) {
+  .size {
+    font-size: 1.25em;
+  }
+
+  th,td {
+    padding: 3px 5px;
+  }
+
+  .menu {
+    display: block;
+  }
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .size {
+    font-size: 1em;
+  }
+
+  .img-container {
+    display: inline;
+    align-items: center;
+  }
+
+  .container {
+    display: inline;
+    width: 100%;
+  }
+  
+}
+
+ol > li{
+  font-size: 18px;
+}
